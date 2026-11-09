@@ -13,3 +13,9 @@ const processInput = (value: number | string | boolean): number | string | boole
         return value? "Active" : "Inactive";
     }
 }
+
+const formatCoordinate = (coordinate: readonly [number, number, string]):number| string => {
+    const[latitude, longitude, locationName] = coordinate;
+
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
+}
